@@ -3,7 +3,6 @@ import org.openrndr.Configuration
 import org.openrndr.Program
 import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.*
-import org.openrndr.filter.filterWatcherFromUrl
 
 /**
  * Example noise filter

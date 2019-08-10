@@ -3,7 +3,7 @@ import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.*
 import org.openrndr.math.Vector3
 import org.openrndr.math.transforms.transform
-import org.openrndr.shape.Triangulator
+import org.openrndr.shape.triangulate
 import org.openrndr.svg.loadSVG
 import java.io.File
 
@@ -18,7 +18,7 @@ class Example : Program() {
     override fun setup() {
         val c = loadSVG(File("data/svg/shape.svg").readText())
         val shape = c.findShapes()[0].shape
-        val points = Triangulator().triangulate(shape.outline)
+        val points = triangulate(shape)
 
         // -- create the vertex buffer
         geometry = vertexBuffer(

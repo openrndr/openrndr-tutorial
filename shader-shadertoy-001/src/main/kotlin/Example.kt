@@ -2,7 +2,6 @@ import org.openrndr.Application
 import org.openrndr.Configuration
 import org.openrndr.Program
 import org.openrndr.draw.*
-import org.openrndr.filter.filterShaderFromUrl
 import org.openrndr.math.Vector3
 import org.openrndr.math.Vector4
 

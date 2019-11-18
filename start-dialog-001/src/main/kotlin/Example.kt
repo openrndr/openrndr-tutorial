@@ -1,5 +1,5 @@
 import org.openrndr.Application
-import org.openrndr.Configuration
+import org.openrndr.Fullscreen
 import org.openrndr.Program
 import org.openrndr.color.ColorRGBa
 import org.openrndr.configuration
@@ -57,7 +57,7 @@ fun main(args: Array<String>) {
 
     fullScreen?.let {
         Application.run(Example(), configuration {
-            fullscreen = it
+            fullscreen = if (it) Fullscreen.CURRENT_DISPLAY_MODE else Fullscreen.DISABLED
             width = if (it) -1 else 640
             height = if (it) -1 else 480
         })
